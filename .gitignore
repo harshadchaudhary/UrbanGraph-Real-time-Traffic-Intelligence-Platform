@@ -1,0 +1,20 @@
+# Python Virtual Environment
+venv/
+*.pyc
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# YOLO Model Weights (optional, agar file size bahut bada ho)
+# yolov8n.pt 
+
+# Environment Variables (CRITICAL)
+# Agar aapne sensitive data ke liye koi file banayi hai, jaise:
+# .env 
+
+# Log Files
+*.log
+
+# Project specific files (Agar koi local config file hai)
+config/local_config.yaml

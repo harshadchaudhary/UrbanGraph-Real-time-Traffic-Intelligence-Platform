@@ -1,0 +1,24 @@
+# UrbanGraph/config/config.yaml
+
+# --- Kafka Settings ---
+KAFKA_TOPICS:
+  VIDEO_STREAM: "urban_frames"  # Producer yahan data bhejega
+  GRAPH_DATA: "urban_graph_updates" # Consumer yahan result bhejega
+  
+  VIDEO_STREAM_PROCESSED: "processed_video_stream"
+# --- Model Settings (YOLOv8) ---
+MODEL_CONFIG:
+  MODEL_NAME: "yolov8n.pt" # Nano model, fast for real-time
+  CONFIDENCE_THRESHOLD: 0.50 # Kam se kam 50% sure hona chahiye
+  CLASSES_TO_DETECT: [0, 1, 2, 3, 5, 7] # 0: person, 1: bicycle, 2: car, 3: motorcycle, 5: bus, 7: truck
+
+# --- Video Ingestion Settings ---
+VIDEO_CONFIG:
+  SOURCE_TYPE: "LIVE" # Abhi FILE use karenge. Baad mein "RTSP" kar sakte hain
+  VIDEO_FILE_PATH: "null" # Ye video file tum project root me rakhoge
+
+# --- Logic Engine Settings ---
+LOGIC_CONFIG:
+  PROXIMITY_THRESHOLD_METERS: 5.0 # Itni doori ko 'NEAR' consider kiya jayega
+  VELOCITY_THRESHOLD_KMH: 40.0 # Isse zyada speed ko 'HIGH_SPEED' consider kiya jayega
+
