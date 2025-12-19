@@ -10,11 +10,10 @@ Thumbs.db
 # yolov8n.pt 
 
 # Environment Variables (CRITICAL)
-# Agar aapne sensitive data ke liye koi file banayi hai, jaise:
 # .env 
 
 # Log Files
 *.log
 
-# Project specific files (Agar koi local config file hai)
+# Project specific files
 config/local_config.yaml
